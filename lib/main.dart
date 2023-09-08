@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx/page/page_reactive_simple.dart';
+import 'package:getx/state/page/page_reactive_simple.dart';
 
 void main() {
   runApp(const MyApp());

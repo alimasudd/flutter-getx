@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx/controller/controller_home.dart';
+import 'package:getx/state/controller/controller_home.dart';
 
 class ReactiveSimple extends StatelessWidget {
   ReactiveSimple({Key? key}) : super(key: key);
