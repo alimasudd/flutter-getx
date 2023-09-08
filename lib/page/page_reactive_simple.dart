@@ -17,12 +17,18 @@ class ReactiveSimple extends StatelessWidget {
           children: [
 
             //state reactive
-            Obx(() {
-              return Text(
-                '${homeC.dataPantau}',
-                style: TextStyle(fontSize: 50),
-              );
-            }),
+            // Obx(() {
+            //   return Text(
+            //     '${homeC.dataPantau}',
+            //     style: TextStyle(fontSize: 50),
+            //   );
+            // }),
+
+            //state simple
+            GetBuilder<HomeController>(builder: (controller)=> Text(
+              '${homeC.dataPantauSimple}',
+              style: const TextStyle(fontSize: 50),
+            )),
 
             const SizedBox(
               height: 30,
@@ -32,12 +38,12 @@ class ReactiveSimple extends StatelessWidget {
               children: [
                 ElevatedButton(
                     onPressed: () {
-                      homeC.decrement();
+                      homeC.decrementSimple();
                     },
                     child: Text('-')),
                 ElevatedButton(
                     onPressed: () {
-                      homeC.increment();
+                      homeC.incrementSimple();
                     },
                     child: Text('+'))
               ],
