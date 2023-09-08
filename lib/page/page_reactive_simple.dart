@@ -12,6 +12,38 @@ class ReactiveSimple extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text('Reactive | Simple'),),
       body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+
+            //state reactive
+            Obx(() {
+              return Text(
+                '${homeC.dataPantau}',
+                style: TextStyle(fontSize: 50),
+              );
+            }),
+
+            const SizedBox(
+              height: 30,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ElevatedButton(
+                    onPressed: () {
+                      homeC.decrement();
+                    },
+                    child: Text('-')),
+                ElevatedButton(
+                    onPressed: () {
+                      homeC.increment();
+                    },
+                    child: Text('+'))
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
