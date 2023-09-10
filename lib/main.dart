@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx/dependecy/page/page_satu.dart';
 import 'package:getx/state/page/page_reactive_simple.dart';
 
 void main() {
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      home: ReactiveSimple(),
+      home: PageSatu(),
     );
   }
 }
