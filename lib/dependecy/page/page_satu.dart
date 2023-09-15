@@ -8,6 +8,9 @@ class PageSatu extends StatelessWidget {
 
   final pageSatuC = Get.put(PageSatuController());
 
+  // create PageSatuController ketika dipakai
+  // final pageSatuCLazy = Get.lazyPut(() => PageSatuController());
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
