@@ -17,9 +17,13 @@ class PageOne extends StatelessWidget {
           children: [
             ElevatedButton(
                 onPressed: (){
+                  // navigator pop
+                  Get.back();
                 },
                 child: Text('back')),
             ElevatedButton(
+                onPressed: (){
+                  Get.to(PageTwo());
                 },
                 child: Text('page two')),
           ],
