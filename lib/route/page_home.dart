@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:getx/route/page_one.dart';
+import 'package:getx/route/page_two.dart';
 
 class PageHome extends StatelessWidget {
   const PageHome({Key? key}) : super(key: key);
@@ -15,10 +18,13 @@ class PageHome extends StatelessWidget {
           children: [
             ElevatedButton(
                 onPressed: (){
+                  Get.to(PageOne());
                 },
                 child: Text('page one')),
             ElevatedButton(
                 onPressed: (){
+                  // push replacement
+                  Get.off(PageTwo());
                 },
                 child: Text('page two')),
           ],
