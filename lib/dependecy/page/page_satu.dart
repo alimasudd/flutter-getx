@@ -30,8 +30,9 @@ class PageSatu extends StatelessWidget {
             ),
             ElevatedButton(
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => PageDua()));
+                  Get.to(() => PageDua(),
+                      //binding getX
+                      binding: BindingsBuilder.put(() => PageSatuController()));
                 },
                 child: Text('Page Dua >'))
           ],
