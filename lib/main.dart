@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx/dependecy/page/page_satu.dart';
+import 'package:getx/route/language.dart';
+import 'package:getx/route/page_home.dart';
 import 'package:getx/state/page/page_reactive_simple.dart';
 
 void main() {
@@ -12,8 +14,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //get material getx
     return GetMaterialApp(
-      home: PageSatu(),
+      translations: Language(),
+      locale: const Locale('id'),
+      home: PageHome(),
     );
   }
 }
